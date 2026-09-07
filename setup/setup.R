@@ -36,8 +36,9 @@
   arch     <- R.version$arch
 
   c(
-    # Bioconductor: r-universe publishes Linux binaries, bioconductor.org does not
-    BIOC = sprintf("https://bioc.r-universe.dev/bin/linux/%s-%s/%s/src/contrib",
+    # Bioconductor: r-universe publishes Linux binaries, bioconductor.org does not.
+    # No "/src/contrib" here — R appends it itself via contrib.url().
+    BIOC = sprintf("https://bioc.r-universe.dev/bin/linux/%s-%s/%s",
                    codename, arch, rver),
     # CRAN: Posit Public Package Manager, binaries chosen by Ubuntu release
     CRAN = sprintf("https://packagemanager.posit.co/cran/__linux__/%s/latest",
