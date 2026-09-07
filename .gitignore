@@ -39,8 +39,15 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-# pkgdown site
-docs/
+# pkgdown site (not used here — docs/ holds instructor notes and is tracked)
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Large artefacts: .rds checkpoints and library tarballs go to a GitHub release,
+# not into the repo
+*.rds
+*.tar.gz
 
 # translation temp files
 po/*~
