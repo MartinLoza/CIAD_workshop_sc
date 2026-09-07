@@ -19,13 +19,15 @@
 .ciad_apt  <- c("libglpk40")   # igraph loads against GLPK; Colab lacks it
 
 .ciad_cran <- c("Seurat", "harmony", "patchwork", "dplyr", "ggplot2", "hdf5r")
-# Canek and its Bioconductor dependencies are opt-in. setup_canek.R sets this
-# flag before sourcing this file; nothing else should.
-.ciad_bioc <- if (isTRUE(get0(".ciad_want_canek", ifnotfound = FALSE))) {
-  "Canek"                      # pulls bluster, BiocNeighbors, S4Vectors, ...
-} else {
-  character(0)
-}
+# Packages with Bioconductor dependencies are opt-in: they cost extra time, and
+# most notebooks do not use them. The setup_*.R wrappers set these flags before
+# sourcing this file; nothing else should.
+.ciad_bioc <- c(
+  # Canek: pulls bluster, BiocNeighbors, S4Vectors, BiocParallel
+  if (isTRUE(get0(".ciad_want_canek",   ifnotfound = FALSE))) "Canek",
+  # glmGamPoi: makes SCTransform fast. Pulls DelayedArray, HDF5Array, beachmat
+  if (isTRUE(get0(".ciad_want_spatial", ifnotfound = FALSE))) "glmGamPoi"
+)
 .ciad_gh   <- c(presto = "immunogenomics/presto")   # not on CRAN; compiles
 
 # --------------------------------------------------------------- where from
