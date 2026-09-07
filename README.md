@@ -13,6 +13,7 @@ Colab. You need a Google account and nothing else.
 | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MartinLoza/CIAD_workshop_sc/blob/main/notebooks/00_hello.ipynb) | **00 — Hello** | 30-second check that Colab works for you. **Run this before the workshop day.** |
 | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MartinLoza/CIAD_workshop_sc/blob/main/notebooks/01_seurat_object.ipynb) | **01 — Inside a Seurat object** | What the object holds and how to get things out of it. ~30 min. |
 | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MartinLoza/CIAD_workshop_sc/blob/main/notebooks/02_qc_and_clustering.ipynb) | **02 — QC and clustering** | From raw counts to named cell types. PBMC 3k. ~60 min. |
+| [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MartinLoza/CIAD_workshop_sc/blob/main/notebooks/03_integration.ipynb) | **03 — Integration** | Two datasets, one batch effect. Harmony and Canek. ~50 min. |
 
 More notebooks appear here as the workshop material is finished.
 
