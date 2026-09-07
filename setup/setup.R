@@ -1,22 +1,31 @@
-# CIAD single-cell workshop — shared setup
+# CIAD single-cell workshop — base setup
 #
-# Sourced at the top of every notebook:
+# Sourced at the top of notebooks 00, 01 and 02:
 #
 #   source("https://raw.githubusercontent.com/MartinLoza/CIAD_workshop_sc/main/setup/setup.R")
+#
+# Notebook 03 needs Canek as well, which costs several extra minutes, so it
+# sources setup_canek.R instead. Do not add Canek here — the point of the split
+# is that notebooks which do not use it do not wait for it.
 #
 # Safe to run more than once. If the runtime disconnects, run the cell again;
 # anything already installed is skipped.
 #
-# Measured on Colab, 2026-09 (R 4.6.1, Ubuntu 22.04.5 jammy): about one minute
-# from a cold runtime. No pre-built tarball is involved — every package below
-# arrives as a binary.
+# Measured on Colab, 2026-09 (R 4.6.1, Ubuntu 22.04.5 jammy). No pre-built
+# tarball is involved — every package below arrives as a binary.
 
 # ---------------------------------------------------------------- what we need
 
 .ciad_apt  <- c("libglpk40")   # igraph loads against GLPK; Colab lacks it
 
 .ciad_cran <- c("Seurat", "harmony", "patchwork", "dplyr", "ggplot2", "hdf5r")
-.ciad_bioc <- c("Canek")       # pulls bluster, BiocNeighbors, S4Vectors, ...
+# Canek and its Bioconductor dependencies are opt-in. setup_canek.R sets this
+# flag before sourcing this file; nothing else should.
+.ciad_bioc <- if (isTRUE(get0(".ciad_want_canek", ifnotfound = FALSE))) {
+  "Canek"                      # pulls bluster, BiocNeighbors, S4Vectors, ...
+} else {
+  character(0)
+}
 .ciad_gh   <- c(presto = "immunogenomics/presto")   # not on CRAN; compiles
 
 # --------------------------------------------------------------- where from
