@@ -90,9 +90,25 @@ All of these drift and are past the knowledge cutoff. Look them up before writin
 
 ## Immediate next step
 
-Ask Martin to run a first cell on a Colab R runtime reporting the R version and Ubuntu
-release, since the install path depends on it. Nothing else is blocked on it, so the
-repo scaffold (Phase 0 of the brief) can proceed in parallel.
+The install path is settled and tested (R 4.6.1, Ubuntu 22.04 jammy, P3M binaries for
+CRAN, r-universe binaries for Bioconductor). Five notebooks are written; only
+`00_hello` has ever been run on Colab. The next step is a test pass on Colab for
+notebooks 01–04, which only Martin can do.
+
+## Who the students are, and how to write for them
+
+New to single-cell analysis, and mostly not native English speakers. The English
+notebooks must use plain, flat English:
+
+- Short sentences. One idea per sentence.
+- No idioms, no figures of speech ("do most of the work", "falling off it",
+  "throw out"). Say the literal thing.
+- Common words over rare ones. Simple verbs, active voice.
+- Define a term the first time it appears, in one line.
+- Keep the field's standard English terms (cluster, assay, layer, counts); those
+  are what the students will meet in every paper and in the Seurat docs.
+
+This applies to markdown in `notebooks/`, and to the README. Code comments too.
 
 ## Repo conventions (from the brief, still current)
 
