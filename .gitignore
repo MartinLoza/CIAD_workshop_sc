@@ -54,3 +54,10 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Data downloaded by the notebooks. The cells write into the working directory,
+# which is notebooks/ locally and /content on Colab. Never commit any of it.
+notebooks/filtered_gene_bc_matrices/
+notebooks/filtered_feature_bc_matrix/
+notebooks/visium/
+notebooks/*.h5
