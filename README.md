@@ -18,6 +18,12 @@ Colab. You need a Google account and nothing else.
 
 More notebooks appear here as the workshop material is finished.
 
+## Lecture slides
+
+The slides from the first hour, the theory part, are here:
+[presentation/CIAD_lecture_single_cell.pdf](presentation/CIAD_lecture_single_cell.pdf).
+You can read them again after the workshop.
+
 ## How this works
 
 Clicking a badge above opens the notebook in Google Colab. Colab gives you a
@@ -45,6 +51,7 @@ that lets you rejoin without redoing the earlier steps.
 ```
 notebooks/      the notebooks you open in Colab
 notebooks/es/   older Spanish drafts, paused (see below)
+presentation/   the lecture slides, in PDF
 setup/          the shared install code the notebooks load
 src/            helper scripts
 data/           small data files
