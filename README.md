@@ -24,6 +24,17 @@ The slides from the first hour, the theory part, are here:
 [presentation/CIAD_lecture_single_cell.pdf](presentation/CIAD_lecture_single_cell.pdf).
 You can read them again after the workshop.
 
+## Feedback
+
+Two short forms. Both are anonymous, and neither asks for your name or your
+email address.
+
+- [**Before we start**](https://docs.google.com/forms/d/e/1FAIpQLSfhIcgACzZQGgfSrqo8hhEPn5z05rpq0o0qOtPt-XWhYa-fhg/viewform) — answer this at the beginning of the session.
+- [**Feedback**](https://docs.google.com/forms/d/e/1FAIpQLSdLjkeDfPcesFg7vdUEnBODmn16WTeeb92vvEXhTrwlgaEJzQ/viewform) — answer this at the end.
+
+Both forms ask you for a short code. Use the same code in both, so we can
+compare the two answers without knowing who you are.
+
 ## How this works
 
 Clicking a badge above opens the notebook in Google Colab. Colab gives you a
@@ -46,11 +57,28 @@ If a notebook fails **before** the workshop, send the error to the instructor.
 If it fails **on the day**, say so — there is a recovery cell in each notebook
 that lets you rejoin without redoing the earlier steps.
 
+## Versiones en español
+
+The notebooks are also available in Spanish, for your convenience. The text is
+translated. The code is the same code, line for line, so you can follow either
+version.
+
+Los notebooks también están en español. El texto está traducido. El código es el
+mismo, línea por línea, así que puedes seguir cualquiera de las dos versiones.
+
+| Notebook | Abrir |
+|---|---|
+| **00 — Hola, R en Colab** | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MartinLoza/CIAD_workshop_sc/blob/main/notebooks/es/00_hello.ipynb) |
+| **01 — Dentro de un objeto Seurat** | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MartinLoza/CIAD_workshop_sc/blob/main/notebooks/es/01_seurat_object.ipynb) |
+| **02 — Control de calidad, clustering y tipos celulares** | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MartinLoza/CIAD_workshop_sc/blob/main/notebooks/es/02_qc_and_clustering.ipynb) |
+| **03 — Integrar dos conjuntos de datos** | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MartinLoza/CIAD_workshop_sc/blob/main/notebooks/es/03_integration.ipynb) |
+| **04 — Transcriptómica espacial** | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MartinLoza/CIAD_workshop_sc/blob/main/notebooks/es/04_spatial.ipynb) |
+
 ## Repository layout
 
 ```
 notebooks/      the notebooks you open in Colab
-notebooks/es/   older Spanish drafts, paused (see below)
+notebooks/es/   the same notebooks, in Spanish
 presentation/   the lecture slides, in PDF
 setup/          the shared install code the notebooks load
 src/            helper scripts
@@ -58,12 +86,9 @@ data/           small data files
 docs/           instructor notes
 ```
 
-`notebooks/es/` holds Spanish drafts of notebooks 00–03. They are **paused and
-out of date** while the English notebooks are still changing, so they are not
-linked above. They will be rebuilt from the English versions once those settle.
-`python3 src/check_translations.py` checks that a Spanish notebook's code cells
-are byte-identical to the English original; it will report differences until the
-rebuild happens.
+`python3 src/check_translations.py` checks that every code cell in a Spanish
+notebook is byte-identical to the English original. Run it after editing any
+notebook.
 
 ## License
 
